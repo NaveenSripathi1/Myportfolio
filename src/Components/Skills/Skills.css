@@ -1,0 +1,174 @@
+/* ===============================
+   SKILLS SECTION
+================================ */
+
+.SkillsContainer {
+  padding: 120px 80px;
+  color: var(--text-primary);
+
+  background: radial-gradient(circle at right, var(--accent-soft), transparent 60%),
+    var(--bg-primary);
+}
+
+.SkillsTitle {
+  font-size: 34px;
+  margin-bottom: 60px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  color: var(--text-primary);
+}
+
+/* ===============================
+   GRID SYSTEM
+================================ */
+
+.SkillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 36px;
+}
+
+/* ===============================
+   SKILL CARD
+================================ */
+
+.SkillCard {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--bg-card) 92%, transparent),
+    var(--bg-card)
+  );
+  padding: 28px 22px;
+  border-radius: 18px;
+  min-height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  overflow: hidden;
+
+  border: 1px solid var(--border-color);
+
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+}
+
+/* ---- Soft glow aura ---- */
+.SkillCard::before {
+  content: '';
+  position: absolute;
+  inset: -25px;
+  border-radius: inherit;
+
+  background: radial-gradient(circle, var(--accent-soft), transparent 65%);
+
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  z-index: -1;
+}
+
+/* ---- Hover interaction ---- */
+.SkillCard:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45), var(--shadow-glow);
+}
+
+.SkillCard:hover::before {
+  opacity: 1;
+}
+
+/* ===============================
+   ICON
+================================ */
+
+.SkillCard img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 16px;
+  transition: transform 0.45s ease;
+}
+
+.SkillCard:hover img {
+  transform: scale(1.2) rotate(4deg);
+}
+
+/* ===============================
+   TEXT
+================================ */
+
+.SkillCard p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  letter-spacing: 0.4px;
+}
+
+/* ===============================
+   RESPONSIVENESS
+================================ */
+
+/* ---- Large tablets ---- */
+@media (max-width: 1024px) {
+  .SkillsContainer {
+    padding: 90px 40px;
+  }
+
+  .SkillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 30px;
+  }
+
+  .SkillCard {
+    min-height: 140px;
+    padding: 24px 20px;
+  }
+}
+
+/* ---- Tablets & large mobiles ---- */
+@media (max-width: 768px) {
+  .SkillsContainer {
+    padding: 80px 24px;
+  }
+
+  .SkillsTitle {
+    font-size: 30px;
+  }
+
+  .SkillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .SkillCard {
+    min-height: 130px;
+    padding: 22px 18px;
+  }
+
+  .SkillCard img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .SkillCard p {
+    font-size: 13px;
+  }
+}
+
+/* ---- Small phones ---- */
+@media (max-width: 420px) {
+  .SkillsGrid {
+    gap: 18px;
+  }
+
+  .SkillCard {
+    min-height: 120px;
+    padding: 20px 16px;
+  }
+
+  .SkillCard img {
+    width: 38px;
+    height: 38px;
+  }
+}

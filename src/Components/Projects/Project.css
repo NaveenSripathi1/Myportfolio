@@ -1,0 +1,193 @@
+/* ===============================
+   PROJECTS SECTION
+================================ */
+
+.ProjectContainer {
+  padding: 120px 80px;
+  color: var(--text-primary);
+
+  background: radial-gradient(circle at right, var(--accent-soft), transparent 60%),
+    var(--bg-primary);
+}
+
+.ProjectTitle {
+  font-size: 34px;
+  margin-bottom: 60px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  color: var(--text-primary);
+}
+
+/* ===============================
+   GRID
+================================ */
+
+.ProjectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 36px;
+}
+
+/* ===============================
+   PROJECT CARD
+================================ */
+
+.ProjectCard {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--bg-card) 92%, transparent),
+    var(--bg-card)
+  );
+  padding: 26px 24px;
+  border-radius: 18px;
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid var(--border-color);
+
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+}
+
+/* ---- Soft glow aura ---- */
+.ProjectCard::before {
+  content: '';
+  position: absolute;
+  inset: -28px;
+  border-radius: inherit;
+
+  background: radial-gradient(circle, var(--accent-soft), transparent 65%);
+
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  z-index: -1;
+}
+
+/* ---- Hover ---- */
+.ProjectCard:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45), var(--shadow-glow);
+}
+
+.ProjectCard:hover::before {
+  opacity: 1;
+}
+
+/* ===============================
+   TEXT CONTENT
+================================ */
+
+.ProjectCard h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.ProjectCard p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ===============================
+   TECH TAGS
+================================ */
+
+.ProjectTech {
+  margin: 18px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ProjectTech span {
+  background: color-mix(in srgb, var(--bg-card) 85%, transparent);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+/* ===============================
+   LINK BUTTON
+================================ */
+
+.ProjectCard a {
+  align-self: flex-start;
+  margin-top: auto;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+
+  position: relative;
+  padding-bottom: 4px;
+}
+
+/* ---- Underline animation ---- */
+.ProjectCard a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width 0.35s ease;
+}
+
+.ProjectCard a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   RESPONSIVENESS
+================================ */
+
+/* ---- Tablets ---- */
+@media (max-width: 1024px) {
+  .ProjectContainer {
+    padding: 90px 40px;
+  }
+
+  .ProjectGrid {
+    gap: 30px;
+  }
+}
+
+/* ---- Tablets & mobiles ---- */
+@media (max-width: 768px) {
+  .ProjectContainer {
+    padding: 80px 24px;
+  }
+
+  .ProjectTitle {
+    font-size: 30px;
+  }
+
+  .ProjectGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .ProjectCard {
+    min-height: 210px;
+  }
+}
+
+/* ---- Small phones ---- */
+@media (max-width: 420px) {
+  .ProjectGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ProjectCard {
+    padding: 22px 20px;
+  }
+}

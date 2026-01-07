@@ -1,0 +1,32 @@
+.Footer {
+  padding: 24px 20px;
+  text-align: center;
+  font-size: 14px;
+
+  color: var(--text-secondary);
+
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--bg-footer) 92%, var(--accent-soft)),
+    var(--bg-footer)
+  );
+
+  border-top: 1px solid var(--border-color);
+  position: fixed;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+
+  min-height: 50px; /* ✅ ensure height */
+  z-index: 1000;
+}
+.Footer::before {
+  content: '';
+  position: absolute;
+  top: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  /* background: linear-gradient(90deg, transparent, var(--accent), transparent); */
+}

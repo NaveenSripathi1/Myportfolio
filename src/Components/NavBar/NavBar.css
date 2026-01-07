@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NAVBAR CONTAINER */
+.NavbarContainer {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28%;
+  padding: 0 40px;
+
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  color: var(--text-primary);
+
+  background: linear-gradient(
+    135deg,
+    var(--bg-navbar),
+    color-mix(in srgb, var(--bg-navbar) 80%, var(--accent-soft))
+  );
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ===============================
+   LOGO
+================================ */
+.NavbarLogo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Lotos', sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.NavbarLogo span {
+  color: var(--accent);
+}
+
+/* ===============================
+   LINKS
+================================ */
+.NavbarLinks {
+  display: flex;
+  gap: 30px;
+  font-family: 'Lotos', sans-serif;
+  font-size: 16px;
+}
+
+.NavbarLinks a {
+  text-decoration: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.NavbarLinks a:hover {
+  color: var(--accent);
+}
+
+/* ===============================
+   HAMBURGER
+================================ */
+.Hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.Hamburger span {
+  width: 22px;
+  height: 2px;
+  background-color: var(--text-primary);
+}
+
+/* ===============================
+   MOBILE MENU
+================================ */
+@media (max-width: 768px) {
+  .NavbarLinks {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+
+    background: var(--bg-secondary);
+
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+
+    display: none;
+    z-index: 999;
+
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .NavbarLinks.open {
+    display: flex;
+  }
+
+  .Hamburger {
+    display: flex;
+  }
+}

@@ -1,0 +1,204 @@
+/* /* ==============================
+   BASE RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   INTRO CONTAINER
+================================ */
+.IntroContainer {
+  min-height: 100vh;
+  width: 100%;
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  color: var(--text-primary);
+
+  background: radial-gradient(circle at right, var(--accent-soft), transparent 60%),
+    var(--bg-primary);
+}
+
+/* ==============================
+   TEXT SECTION
+================================ */
+.IntroText {
+  max-width: 550px;
+}
+
+.IntroGreeting {
+  font-size: 18px;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.IntroTitle {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.IntroTitle span {
+  color: var(--accent);
+}
+
+.IntroDescription {
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ==============================
+   BUTTONS
+================================ */
+.IntroButtons {
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+}
+
+.ResumeBtn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-glow);
+}
+
+.ResumeBtn:hover {
+  transform: translateY(-2px);
+}
+
+.ResumeBtn.Outline {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  box-shadow: none;
+}
+
+.ResumeBtn.Outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ==============================
+   IMAGE SECTION
+================================ */
+.IntroImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Glow wrapper */
+.GlowWrapper {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.GlowWrapper::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, var(--accent-soft), transparent 65%);
+  filter: blur(40px);
+  z-index: 0;
+}
+
+/* Outer ring */
+.OuterCircle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 60%, purple));
+  box-shadow: var(--shadow-glow);
+}
+
+/* Inner circle */
+.InnerCircle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+}
+
+/* FIXED IMAGE */
+.InnerCircle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 1024px) {
+  .IntroContainer {
+    padding: 80px 6%;
+  }
+
+  .IntroTitle {
+    font-size: 48px;
+  }
+
+  .GlowWrapper {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .IntroContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 70px 6%;
+  }
+
+  .IntroButtons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .GlowWrapper {
+    width: 260px;
+    height: 260px;
+    margin-bottom: 40px;
+  }
+
+  .IntroTitle {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .IntroTitle {
+    font-size: 34px;
+  }
+
+  .IntroDescription {
+    font-size: 14px;
+  }
+
+  .GlowWrapper {
+    width: 220px;
+    height: 220px;
+  }
+}

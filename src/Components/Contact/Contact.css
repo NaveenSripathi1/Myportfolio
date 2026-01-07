@@ -1,12 +1,7 @@
-/* ===============================
-   CONTACT SECTION
-================================ */
-
 .ContactContainer {
   padding: 80px 60px;
   text-align: center;
   color: var(--text-primary);
-
   background: radial-gradient(circle at right, var(--accent-soft), transparent 60%),
     var(--bg-primary);
 }
@@ -36,17 +31,13 @@
 .ContactLinks a {
   width: 48px;
   height: 48px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: var(--bg-card);
   border-radius: 50%;
-
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-glow);
-
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 

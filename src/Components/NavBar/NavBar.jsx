@@ -45,7 +45,7 @@ const NavBar = ({ theme, toggleTheme }) => {
         <button className="HamburgerBtn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
           <svg
             width="24"
-            height="24"
+            height="26"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"

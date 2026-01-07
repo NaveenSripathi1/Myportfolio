@@ -1,11 +1,6 @@
-/* ===============================
-   SKILLS SECTION
-================================ */
-
 .SkillsContainer {
   padding: 120px 80px;
   color: var(--text-primary);
-
   background: radial-gradient(circle at right, var(--accent-soft), transparent 60%),
     var(--bg-primary);
 }
@@ -42,17 +37,13 @@
   padding: 28px 22px;
   border-radius: 18px;
   min-height: 150px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   text-align: center;
   overflow: hidden;
-
   border: 1px solid var(--border-color);
-
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
 }
 
@@ -62,9 +53,7 @@
   position: absolute;
   inset: -25px;
   border-radius: inherit;
-
   background: radial-gradient(circle, var(--accent-soft), transparent 65%);
-
   opacity: 0;
   transition: opacity 0.45s ease;
   z-index: -1;

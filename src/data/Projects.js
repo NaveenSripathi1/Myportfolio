@@ -3,13 +3,13 @@ export const projects = [
     title: 'Portfolio Website',
     description: 'Personal portfolio built using React and modern CSS with responsive design.',
     tech: ['React', 'CSS'],
-    link: 'https://github.com/NaveenSripathi1',
+    link: 'https://github.com/NaveenSripathi1/Myportfolio',
   },
   {
     title: 'Todo App',
     description: 'Simple todo application with CRUD operations and clean UI.',
     tech: ['JavaScript', 'React'],
-    link: 'https://github.com/NaveenSripathi1',
+    link: 'https://github.com/NaveenSripathi1/todo-list',
   },
   {
     title: 'Bus Booking System',

@@ -4,15 +4,18 @@
   box-sizing: border-box;
 }
 
-/* NAVBAR CONTAINER */
+/* ===============================
+   NAVBAR CONTAINER
+================================ */
 .NavbarContainer {
   width: 100vw;
   height: 60px;
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 28%;
-  padding: 0 40px;
+  justify-content: space-between;
+
+  padding: 0 24px;
 
   position: fixed;
   top: 0;
@@ -37,7 +40,7 @@
    LOGO
 ================================ */
 .NavbarLogo {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   font-family: 'Lotos', sans-serif;
   letter-spacing: 1px;
@@ -49,7 +52,7 @@
 }
 
 /* ===============================
-   LINKS
+   LINKS (DESKTOP)
 ================================ */
 .NavbarLinks {
   display: flex;
@@ -70,23 +73,70 @@
 }
 
 /* ===============================
-   HAMBURGER
+   ACTIONS (THEME + HAMBURGER)
 ================================ */
-.Hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
+.NavbarActions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.Hamburger span {
-  width: 22px;
-  height: 2px;
-  background-color: var(--text-primary);
+.ThemeBtn {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+
+  color: var(--text-primary);
+
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 0 10px rgba(0, 255, 255, 0.25);
+
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.ThemeBtn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 14px var(--accent-soft), 0 0 24px var(--accent-soft);
+  transform: scale(1.08);
 }
 
 /* ===============================
-   MOBILE MENU
+   HAMBURGER BUTTON (SVG)
+================================ */
+.HamburgerBtn {
+  display: none; /* visible only on mobile */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: var(--text-primary);
+}
+
+.HamburgerBtn svg {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.HamburgerBtn:hover svg {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+/* ===============================
+   MOBILE MENU (SMOOTH TRANSITION)
 ================================ */
 @media (max-width: 768px) {
   .NavbarLinks {
@@ -100,19 +150,34 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
+    /* KEEP padding always — avoid snapping */
     padding: 20px 0;
 
-    display: none;
+    /* Animation setup */
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+
+    overflow: hidden;
+    pointer-events: none;
+
+    transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.25s ease;
+
     z-index: 999;
 
     border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-glow);
   }
 
   .NavbarLinks.open {
-    display: flex;
+    max-height: 320px; /* stable value */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
-  .Hamburger {
-    display: flex;
+  .HamburgerBtn {
+    display: block;
   }
 }

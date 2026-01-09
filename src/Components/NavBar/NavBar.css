@@ -42,7 +42,7 @@
 .NavbarLogo {
   font-size: 22px;
   font-weight: bold;
-  font-family: 'Lotos', sans-serif;
+  /* font-family: 'Lotos', sans-serif; */
   letter-spacing: 1px;
   cursor: pointer;
 }
@@ -57,7 +57,7 @@
 .NavbarLinks {
   display: flex;
   gap: 30px;
-  font-family: 'Lotos', sans-serif;
+  /* font-family: 'Lotos', sans-serif; */
   font-size: 16px;
 }
 

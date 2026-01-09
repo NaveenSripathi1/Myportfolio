@@ -37,10 +37,10 @@ body {
   --text-secondary: #4b5563;
 
   /* Accent */
-  --accent: #0077ff;
-  --accent-soft: rgba(0, 119, 255, 0.14);
+  --accent-gradient: linear-gradient(135deg, #5f6ef6d0, #05aff8c2);
+  --accent: #5f6df6;
 
-  /* Borders & shadows */
-  --border-color: rgba(0, 0, 0, 0.1);
-  --shadow-glow: 0 0 22px rgba(0, 119, 255, 0.22);
+  --accent-soft: rgba(95, 109, 246, 0.18);
+
+  --shadow-glow: 0 0 18px rgba(95, 109, 246, 0.28);
 }

@@ -11,10 +11,11 @@ const Intro = () => {
         <h1 className="IntroTitle">
           <span>I</span>'m <span>N</span>aveen
         </h1>
+        <h2 className="IntroRole">Frontend Developer</h2>
 
         <p className="IntroDescription">
-          I’m a frontend developer with a passion for building intuitive <br />
-          and engaging web experiences.
+          I’m a frontend developer with a passion for building intuitive and engaging web
+          experiences.
         </p>
 
         <div className="IntroButtons">
@@ -37,7 +38,7 @@ const Intro = () => {
         <div className="GlowWrapper">
           <div className="OuterCircle">
             <div className="InnerCircle">
-              <img src={Myimage} alt="Naveen profile" />
+              <img src={Myimage} alt="Naveen profile" loading="lazy" />
             </div>
           </div>
         </div>

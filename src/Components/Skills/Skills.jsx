@@ -10,7 +10,8 @@ const Skills = () => {
       <div className="SkillsGrid">
         {skills.map((skill) => (
           <div key={skill.name} className="SkillCard">
-            <img src={skill.icon} alt={skill.name} />
+            <img src={skill.icon} alt={`${skill.name} logo`} loading="lazy" />
+
             <p>{skill.name}</p>
           </div>
         ))}

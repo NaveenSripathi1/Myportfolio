@@ -38,8 +38,8 @@ body {
   --text-secondary: #4b5563;
 
   /* Accent */
-  --accent-gradient: linear-gradient(135deg, #5f6ef6d0, #05aff8c2);
-  --accent: #5f6df6;
+  --accent-gradient: linear-gradient(135deg, #5f6ef6c3, #05aff8c2);
+  --accent: #5f6ef6c5;
 
   --accent-soft: rgba(95, 109, 246, 0.18);
 

@@ -1,7 +1,7 @@
 .SkillsContainer {
   padding: 120px 80px;
   color: var(--text-primary);
-  background: radial-gradient(circle at right, var(--accent-soft), transparent 60%),
+  background: radial-gradient(circle at right, rgba(95, 108, 255, 0.08), transparent 65%),
     var(--bg-primary);
 }
 
@@ -31,38 +31,46 @@
   position: relative;
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--bg-card) 92%, transparent),
+    color-mix(in srgb, var(--bg-card) 94%, transparent),
     var(--bg-card)
   );
   padding: 28px 22px;
   border-radius: 18px;
   min-height: 150px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+
   overflow: hidden;
   border: 1px solid var(--border-color);
-  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+
+  /* CLEAN SHADOW */
+  box-shadow: var(--shadow-elevation);
+
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
 }
 
-/* ---- Soft glow aura ---- */
+/* ---- Subtle accent aura (hover only) ---- */
 .SkillCard::before {
   content: '';
   position: absolute;
-  inset: -25px;
+  inset: -18px;
   border-radius: inherit;
-  background: radial-gradient(circle, var(--accent-soft), transparent 65%);
+
+  background: radial-gradient(circle, rgba(95, 108, 255, 0.22), transparent 65%);
+
   opacity: 0;
-  transition: opacity 0.45s ease;
+  transition: opacity 0.35s ease;
   z-index: -1;
 }
 
 /* ---- Hover interaction ---- */
 .SkillCard:hover {
-  transform: translateY(-10px) scale(1.04);
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45), var(--shadow-glow);
+  transform: translateY(-6px) scale(1.025);
+  box-shadow: var(--shadow-elevation), var(--shadow-accent);
 }
 
 .SkillCard:hover::before {
@@ -77,11 +85,11 @@
   width: 50px;
   height: 50px;
   margin-bottom: 16px;
-  transition: transform 0.45s ease;
+  transition: transform 0.35s ease;
 }
 
 .SkillCard:hover img {
-  transform: scale(1.2) rotate(4deg);
+  transform: scale(1.12);
 }
 
 /* ===============================

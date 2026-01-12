@@ -18,7 +18,7 @@
 
   color: var(--text-primary);
 
-  background: radial-gradient(circle at right, var(--accent-soft), transparent 60%),
+  background: radial-gradient(circle at right, rgba(95, 108, 255, 0.1), transparent 65%),
     var(--bg-primary);
 }
 
@@ -72,27 +72,27 @@
   padding: 12px 28px;
   border-radius: 30px;
   background: var(--accent-gradient);
-  color: #fff;
+  color: #ffffff;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-glow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 6px 18px rgba(95, 108, 255, 0.35);
 }
 
 .ResumeBtn:hover {
   transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(95, 108, 255, 0.45);
 }
 
 .ResumeBtn.Outline {
   background: transparent;
   color: var(--accent);
-  border: 2px solid var(--accent);
+  border: 1.5px solid rgba(95, 108, 255, 0.45);
   box-shadow: none;
 }
 
 .ResumeBtn.Outline:hover {
-  background: var(--accent-gradient);
-  color: #fff;
+  background: rgba(95, 108, 255, 0.1);
 }
 
 /* ==============================

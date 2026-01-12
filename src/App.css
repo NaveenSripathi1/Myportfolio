@@ -5,43 +5,52 @@ body {
   font-family: 'Lotos', sans-serif;
 }
 
-/*DARK THEME */
 :root {
-  --bg-navbar: rgba(8, 18, 28, 0.85);
-  --bg-footer: #03070c;
-  --bg-primary: #050c14;
-  --bg-secondary: #0b0f14;
-  --bg-card: #151515;
-
-  --text-primary: #ffffff;
-  --text-secondary: #cfd8dc;
-
-  --accent: #00e5ff;
-  --accent-soft: rgba(0, 229, 255, 0.15);
-
-  --border-color: rgba(255, 255, 255, 0.08);
-  --shadow-glow: 0 0 30px rgba(0, 229, 255, 0.35);
-}
-
-/* LIGHT THEME */
-[data-theme='light'] {
-  --bg-navbar: rgba(220, 228, 238, 0.7);
-  --bg-footer: #e1e7f0;
-
-  /* Main backgrounds */
-  --bg-primary: #f2f5f9;
-  --bg-secondary: #ffffff;
-  --bg-card: #edf1f6;
+  /* Backgrounds */
+  --bg-navbar: rgba(10, 15, 30, 0.8);
+  --bg-primary: #020617;
+  --bg-secondary: #020617;
+  --bg-card: #0b1224;
+  --bg-footer: #020617;
 
   /* Text */
-  --text-primary: #0b0f14;
-  --text-secondary: #4b5563;
+  --text-primary: #e6e9f0;
+  --text-secondary: #9aa4b2;
 
   /* Accent */
-  --accent-gradient: linear-gradient(135deg, #5f6ef6c3, #05aff8c2);
-  --accent: #5f6ef6c5;
+  --accent: #5f6cff;
+  --accent-soft: rgba(95, 108, 255, 0.14);
+  --accent-gradient: linear-gradient(135deg, #5f6cff, #7c86ff);
 
-  --accent-soft: rgba(95, 109, 246, 0.18);
+  /* Borders */
+  --border-color: rgba(255, 255, 255, 0.06);
 
-  --shadow-glow: 0 0 18px rgba(95, 109, 246, 0.28);
+  /* SHADOWS (clean & professional) */
+  --shadow-elevation: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-accent: 0 0 10px rgba(95, 108, 255, 0.22);
+}
+
+[data-theme='light'] {
+  /* Backgrounds */
+  --bg-navbar: rgba(244, 246, 250, 0.8);
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #eef2f8;
+  --bg-footer: #e5eaf2;
+
+  /* Text */
+  --text-primary: #0f172a;
+  --text-secondary: #5b6473;
+
+  /* Accent */
+  --accent: #5f6cff;
+  --accent-soft: rgba(95, 108, 255, 0.12);
+  --accent-gradient: linear-gradient(135deg, #5f6cff, #7c86ff);
+
+  /* Borders */
+  --border-color: rgba(15, 23, 42, 0.06);
+
+  /* SHADOWS (very subtle) */
+  --shadow-elevation: 0 8px 24px rgba(15, 23, 42, 0.12);
+  --shadow-accent: 0 0 8px rgba(95, 108, 255, 0.18);
 }

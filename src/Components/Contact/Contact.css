@@ -2,7 +2,8 @@
   padding: 80px 60px;
   text-align: center;
   color: var(--text-primary);
-  background: radial-gradient(circle at right, var(--accent-soft), transparent 60%),
+
+  background: radial-gradient(circle at right, rgba(95, 108, 255, 0.08), transparent 65%),
     var(--bg-primary);
 }
 
@@ -31,20 +32,27 @@
 .ContactLinks a {
   width: 48px;
   height: 48px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   background: var(--bg-card);
   border-radius: 50%;
   border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-glow);
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+
+  /* CLEAN BASE SHADOW */
+  box-shadow: var(--shadow-elevation);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .ContactLinks a:hover {
-  transform: translateY(-6px);
-  background: color-mix(in srgb, var(--accent) 15%, var(--bg-card));
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25), var(--shadow-glow);
+  transform: translateY(-4px);
+
+  background: color-mix(in srgb, var(--accent) 10%, var(--bg-card));
+
+  box-shadow: var(--shadow-elevation), var(--shadow-accent);
 }
 
 .ContactLinks img {
